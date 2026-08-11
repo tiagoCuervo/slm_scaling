@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+data/
+out/
+wandb/
+*.pt
+*.pth
+*.safetensors
+model.safetensors.index.json

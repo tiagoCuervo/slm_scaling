@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slm-research"
+version = "0.1.0"
+description = "Minimal Llama-style speech language modeling and speech-unit preparation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "Santiago Cuervo"}]
+dependencies = [
+  "numpy>=1.24,<3",
+  "safetensors>=0.4.3,<1",
+  "torch>=2.4,<3",
+]
+
+[project.optional-dependencies]
+data = [
+  "datasets>=2.20,<5",
+  "huggingface-hub>=0.24,<2",
+  "joblib>=1.3,<2",
+  "scikit-learn>=1.4,<2",
+  "soundfile>=0.12,<1",
+  "torchaudio>=2.4,<3",
+  "transformers>=4.48,<5",
+]
+hubert = ["joblib>=1.3,<2", "scikit-learn>=1.4,<2", "transformers>=4.48,<5"]
+tts = ["kokoro>=0.9.4,<1"]
+audio = ["huggingface-hub>=0.24,<2", "soundfile>=0.12,<1"]
+notebook = [
+  "ipykernel>=6.29,<7",
+  "ipython>=8.26,<10",
+  "nbclient>=0.10,<1",
+  "nbformat>=5.10,<6",
+]
+logging = ["wandb>=0.17,<1"]
+dev = ["nbclient>=0.10,<1", "pytest>=8,<10", "ruff>=0.6,<1"]
+
+[project.scripts]
+slm-data = "slm_data.cli:main"
+slm-train = "slm.train:main"
+slm-eval = "slm.evaluate:main"
+slm-convert = "slm.convert_checkpoint:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
