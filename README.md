@@ -1,4 +1,4 @@
-# Generative Speech Language Modeling Scaling
+# Scaling suite of Generative Speech Language Models
 
 [![Paper](https://img.shields.io/badge/EMNLP-2024-4b44ce.svg)](https://aclanthology.org/2024.emnlp-main.21/)
 [![Models](https://img.shields.io/badge/%F0%9F%A4%97-Hugging_Face-FFD21E.svg)](https://huggingface.co/collections/tiagoCuervo/gslm-scaling)
