@@ -4,7 +4,7 @@
 [![Models](https://img.shields.io/badge/%F0%9F%A4%97-Hugging_Face-FFD21E.svg)](https://huggingface.co/collections/tiagoCuervo/gslm-scaling)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-Roughly a speech version of nanoGPT: a compact Llama-style autoregressive model over HuBERT units,
+Roughly a speech version of [nanoGPT](https://github.com/karpathy/nanogpt): a compact Llama-style autoregressive model over HuBERT units,
 plus data preparation, DDP training, evaluation, safetensors export, and KV-cached generation.
 
 This repository accompanies [*Scaling Properties of Speech Language
